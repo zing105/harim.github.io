@@ -9,6 +9,22 @@
     <meta property="og:image" content="https://dldk.com/wp-content/uploads/2023/02/dldkkorea_web_event_small-1.jpg">
     <meta property="og:url" content="https://zing105.github.io/harim.github.io/index.html">
     <title>DLDK 오픈채팅 방 링크</title>
+        <script>
+      // 누적 방문자 수를 저장할 변수를 초기화합니다.
+      let count = 0;
+      
+      // 쿠키를 읽어와 변수에 저장합니다. 만약 쿠키가 존재하지 않으면 0으로 초기화합니다.
+      if (document.cookie) {
+        count = parseInt(document.cookie.split('=')[1]);
+      }
+      
+      // 카운트를 증가시키고, 새로운 값을 쿠키에 저장합니다.
+      count++;
+      document.cookie = `count=${count}; path=/`;
+      
+      // 카운트된 값을 HTML 문서에 삽입합니다.
+      document.getElementById("count").innerHTML = count;
+    </script>
 </head>
 <style>
     h1,p{text-align: center;}
@@ -25,6 +41,7 @@
     }
 </style>
 <body>
+    <div><h2>현재까지 <span id="count"></span>명이 방문하였습니다.</h2></div>
         <section class="se1">
             <h1>페스티벌 어디까지 가봤니?<br>오픈톡방 링크입니다.</h1>
             <p><a href="https://open.kakao.com/o/g5UBb8cf" target="_self">클릭하세요 오픈채팅 링크로 연결됩니다.</a></p>
